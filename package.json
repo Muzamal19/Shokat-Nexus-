@@ -1,0 +1,16 @@
+{
+  "name": "shokat-nexus-digital",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.33.2",
+  "description": "React/Vite website and Express contact API for Shokat Nexus Digital.",
+  "scripts": {
+    "install:all": "npm install --prefix frontend && npm install --prefix backend",
+    "dev": "concurrently \"corepack pnpm --filter shokat-nexus-digital-frontend dev\" \"corepack pnpm --filter shokat-nexus-digital-backend dev\"",
+    "build": "corepack pnpm --filter shokat-nexus-digital-frontend build",
+    "start": "corepack pnpm --filter shokat-nexus-digital-backend start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
