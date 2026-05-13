@@ -15,6 +15,13 @@ app.get("/", (req, res) => {
 });
 
 const app = express();
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "Backend is running"
+  });
+});
+
 const port = process.env.PORT || 5000;
 const clientUrl = process.env.CLIENT_URL || 'http://localhost:5173';
 const allowedOrigins = new Set([clientUrl, 'http://localhost:5173', 'http://127.0.0.1:5173']);
