@@ -6,13 +6,7 @@ import helmet from 'helmet';
 import nodemailer from 'nodemailer';
 
 dotenv.config();
-
-app.get("/", (req, res) => {
-  res.json({
-    success: true,
-    message: "Backend is running"
-  });
-});
+ 
 
 const app = express();
 app.get("/", (req, res) => {
