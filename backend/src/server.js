@@ -7,6 +7,13 @@ import nodemailer from 'nodemailer';
 
 dotenv.config();
 
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "Backend is running"
+  });
+});
+
 const app = express();
 const port = process.env.PORT || 5000;
 const clientUrl = process.env.CLIENT_URL || 'http://localhost:5173';
